@@ -3,13 +3,12 @@
 
 # In[6]:
 
-
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
 import pandas as pd
 import os
 import tempfile
-from EDA_for_Pet_project import generate_eda_report  # импорт из внешнего модуля
+from eda_generator import generate_eda_report  # импорт из внешнего модуля
 
 app = FastAPI()
 
@@ -45,7 +44,3 @@ async def upload_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=f"Ошибка при создании отчета: {str(e)}")
 
     return FileResponse(path=output_html_path, filename="EDA_Report.html", media_type='text/html')
-
-
-
-
