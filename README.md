@@ -7,38 +7,35 @@
 Как запустить проект
 
 1. Клонируйте репозиторий:
-  git clone https://github.com/Sofyalka/eda-generator.git
-
-
-
-   cd eda-generator
-
-3.	Создайте виртуальное окружение (рекомендуется):
    
-    Для Linux/Mac
-  	
-    python -m venv venv
-    source venv/bin/activate
+       git clone https://github.com/Sofyalka/eda-generator.git
+       cd eda-generator
 
-
-    Для Windows
-  	
-    python -m venv venv
-    venv\Scripts\activate     
-
-5.	Установите зависимости:
+2.	Создайте виртуальное окружение (рекомендуется):
    
-    pip install -r requirements.txt
+     Для Linux/Mac
+  	
+        python -m venv venv
+        source venv/bin/activate
+
+     Для Windows
+  	
+        python -m venv venv
+        venv\Scripts\activate     
+
+3.	Установите зависимости:
+   
+        pip install -r requirements.txt
 
 7.	Запустите backend (FastAPI):
    
-    uvicorn backend:app --reload
+        uvicorn backend:app --reload
   	
     (мой файл называется backend.py)
   	
 9.	В новом терминале запустите frontend (Streamlit):
     
-    streamlit run front.py
+        streamlit run front.py
 
 11.	Браузер откроется автоматически или запустите его по адресу http://localhost:8501 :
 
