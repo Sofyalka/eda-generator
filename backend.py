@@ -47,8 +47,5 @@ async def upload_file(file: UploadFile = File(...)):
     return FileResponse(path=output_html_path, filename="EDA_Report.html", media_type='text/html')
 
 
-# In[ ]:
-
-
 
 
