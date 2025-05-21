@@ -11,14 +11,18 @@
   cd eda-generator
 
 2.	Создайте виртуальное окружение (рекомендуется):
+  Для Linux/Mac
   python -m venv venv
-  source venv/bin/activate  # Для Linux/Mac
-  venv\Scripts\activate     # Для Windows
+  source venv/bin/activate
 
-3.	Установите зависимости:
+  Для Windows
+  python -m venv venv
+  venv\Scripts\activate     
+
+4.	Установите зависимости:
   pip install -r requirements.txt
 
-4.	Запустите backend (FastAPI):
+5.	Запустите backend (FastAPI):
   uvicorn backend:app --reload
   (мой файл называется backend.py)
   	
