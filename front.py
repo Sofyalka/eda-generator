@@ -2,14 +2,9 @@
 # coding: utf-8
 
 # In[1]:
-
-
 #pip install streamlit
 
-
-# In[16]:
-
-
+# In[18]:
 import streamlit as st
 import pandas as pd
 import requests
@@ -34,6 +29,7 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # Заголовок
 st.title("Генерация EDA-отчета")
@@ -60,6 +56,19 @@ if uploaded_file is not None:
                 file_name="EDA_Report.html",
                 mime="text/html"
             )
+            
+            st.markdown(
+                """
+                <p>Чтобы сохранить отчет в формате PDF:</p>
+                <ol>
+                    <li>Откройте скачанный HTML-файл в браузере</li>
+                    <li>Нажмите <b>Ctrl+P</b> (или ⌘+P на Mac)</li>
+                    <li>Выберите «Сохранить как PDF»</li>
+                </ol>
+                """,
+                unsafe_allow_html=True
+            )
+            
         else:
             status.update(label="Ошибка ", state="error")
             st.error(f"Ошибка при генерации отчета: {response.text}")
@@ -75,4 +84,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
