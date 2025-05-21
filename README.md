@@ -20,7 +20,7 @@
 
 4.	Запустите backend (FastAPI):
   uvicorn backend:app --reload
-   #### (мой файл называется backend.py)
+  (мой файл называется backend.py)
   	
 6.	В новом терминале запустите frontend (Streamlit):
   streamlit run front.py
