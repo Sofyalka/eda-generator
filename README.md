@@ -52,3 +52,11 @@
 	•	Нажмите Ctrl+P (или ⌘+P на Mac)
  
 	•	Выберите «Сохранить как PDF»
+ 
+Используемые технологии:
+
+	•	Python
+	•	FastAPI
+	•	Streamlit
+	•	Pandas
+	•	ydata_profiling
